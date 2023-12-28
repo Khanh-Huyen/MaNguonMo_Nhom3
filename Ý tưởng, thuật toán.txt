@@ -1,0 +1,26 @@
+1. Chức năng tạo một bài toán sudoku:
+thuật toán : tạo một bảng sudoku trống => sử dụng thuật toán Exact Cover để giải => xóa một số ô ngẫu nhiên để tạo bài toán
+2. Chức năng hướng dẫn chơi sudoku:
+
+**Thuật thoán Exact Cover:
+*Thuật toán Exact Cover là một phương pháp giải quyết vấn đề tìm một tập con của các ràng buộc sao cho mỗi phần tử trong không gian tìm kiếm được bao phủ một lần và chỉ một lần. 
+*Biểu diễn:
+Một vấn đề Exact Cover thường được biểu diễn dưới dạng ma trận, với mỗi hàng biểu thị một phần tử cần được bao phủ và mỗi cột biểu thị một ràng buộc có thể bao phủ phần tử đó.
+*Thuật toán:
+Bước 1: Khởi tạo Ma trận:
+Khởi tạo ma trận với các dòng biểu thị phần tử cần được bao phủ và các cột biểu thị ràng buộc.
+Gán giá trị 1 cho các ô trong ma trận tương ứng với việc một ràng buộc bao phủ một phần tử.
+Bước 2: Chọn Cột:
+Chọn một cột chưa được bao phủ và có ít lựa chọn nhất.
+Bước 3: Chọn Hàng:
+Chọn một hàng (phần tử) trong cột đã chọn. Nếu có nhiều hơn một hàng, chọn một cách tùy chọn.
+Bước 4: Loại bỏ Ràng buộc và Cột:
+Loại bỏ tất cả các cột và hàng liên quan đến hàng và cột đã chọn.
+Đánh dấu các ô đã bị che phủ và loại bỏ các ràng buộc liên quan.
+Bước 5: Lặp lại hoặc kết thúc:
+Nếu mọi phần tử đều đã được bao phủ, thuật toán kết thúc.
+Ngược lại, lặp lại từ bước 2.
+Bước 6: Backtracking (nếu cần):
+Nếu tại một bước nào đó không thể tiếp tục (không còn cột để chọn hoặc không có hàng nào chọn được), sử dụng kỹ thuật backtracking để quay lại trạng thái trước đó và thử các lựa chọn khác.
+*Kết quả:
+Kết quả là một tập hợp các hàng đã chọn, thỏa mãn điều kiện bao phủ cho mỗi phần tử trong không gian tìm kiếm.
